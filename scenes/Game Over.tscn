@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://CCWildWords.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/Y2meta.app - Metal Gear Solid Game Over screen [Clean background] (128 kbps).mp3" type="AudioStream" id=2]
+[ext_resource path="res://ContBold.tres" type="DynamicFont" id=3]
+[ext_resource path="res://scripts/Game Over.gd" type="Script" id=4]
+[ext_resource path="res://scripts/LinkButton.gd" type="Script" id=5]
+
+[node name="ColorRect" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.454902, 0.0156863, 0.0156863, 1 )
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 155.0
+margin_top = 93.0
+margin_right = 877.0
+margin_bottom = 196.0
+custom_fonts/font = ExtResource( 1 )
+text = "GAME OVER"
+
+[node name="LinkButton" type="LinkButton" parent="."]
+margin_left = 320.0
+margin_top = 353.0
+margin_right = 726.0
+margin_bottom = 435.0
+custom_colors/font_color = Color( 0.968627, 1, 0, 1 )
+custom_colors/font_color_hover = Color( 0.717647, 0.654902, 0.12549, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "MAIN MENU"
+script = ExtResource( 5 )
+scene_to_load = "MainMenu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="pressed" from="LinkButton" to="LinkButton" method="_on_New_Game_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Y2meta.app - Metal Gear Solid Game Over screen [Clean background] (128 kbps).mp3-b24a814c4e7a0d1b7dd4f86f378748a2.mp3str"
+
+[deps]
+
+source_file="res://assets/Y2meta.app - Metal Gear Solid Game Over screen [Clean background] (128 kbps).mp3"
+dest_files=[ "res://.import/Y2meta.app - Metal Gear Solid Game Over screen [Clean background] (128 kbps).mp3-b24a814c4e7a0d1b7dd4f86f378748a2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

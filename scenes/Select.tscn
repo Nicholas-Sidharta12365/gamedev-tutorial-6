@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://CCWildWords.tres" type="DynamicFont" id=1]
+[ext_resource path="res://ContBold.tres" type="DynamicFont" id=2]
+[ext_resource path="res://scripts/Button.gd" type="Script" id=3]
+
+[node name="ColorRect" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 243.0
+margin_top = 86.0
+margin_right = 766.0
+margin_bottom = 168.0
+custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Pick Your Level"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 279.0
+margin_top = 225.0
+margin_right = 329.0
+margin_bottom = 334.0
+rect_scale = Vector2( 3, 2 )
+custom_colors/font_color = Color( 0.678431, 0.184314, 0.184314, 1 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "1"
+script = ExtResource( 3 )
+level = "1"
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 572.0
+margin_top = 225.0
+margin_right = 660.0
+margin_bottom = 334.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0.635294, 0.129412, 0.129412, 1 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "2"
+script = ExtResource( 3 )
+level = "2"
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_Button_pressed"]
